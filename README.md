@@ -8,7 +8,7 @@
 
 
 # Документация:
-
+[ТЗ](file:///C:/Users/79005/Downloads/Tekhnicheskoe_zadanie_1.pdf)
 
 
 # Сервисы
