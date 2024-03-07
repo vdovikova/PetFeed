@@ -12,3 +12,5 @@
 
 
 # Сервисы
+- [Miro]
+- [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
