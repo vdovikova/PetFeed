@@ -20,5 +20,5 @@
 - [Диаграммы](https://github.com/Purpletta/PetFeed/tree/main/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B)
 
 # Сервисы
-- [Miro]
+- [Miro](https://miro.com/app/board/uXjVNix6Kkc=/#tpicker-content)
 - [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
