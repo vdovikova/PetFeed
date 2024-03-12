@@ -18,7 +18,7 @@
 # Документация:
 - [Техническое Задание](https://github.com/Purpletta/PetFeed/tree/main/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5)
 - [Диаграммы](https://github.com/Purpletta/PetFeed/tree/main/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B)
-
+- [Презентация](https://github.com/Purpletta/PetFeed/tree/main/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F)
 # Сервисы
 - [Miro](https://miro.com/app/board/uXjVNix6Kkc=/#tpicker-content)
 - [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
