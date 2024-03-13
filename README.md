@@ -1,8 +1,8 @@
 # PetFeed
 # Выполняют студенты 4.6:
-1. [Блинова Оксана](https://github.com/OksanaBlinova) - документация
-2. [Семенов Алексей](https://github.com/Purpletta) - разработка
-3. [Вдовикова Елена](https://github.com/vdovikova) - разработка
+1. [Блинова Оксана](https://github.com/OksanaBlinova) - Project Manager, документация
+2. [Семенов Алексей](https://github.com/Purpletta) - Backend, Frontend, Mobile developer
+3. [Вдовикова Елена](https://github.com/vdovikova) - Backend, QA-инженер, дизайнер
 # Тема: 
 Система для учета и анализа питания домашних животных, с рекомендациями по кормлению и уходу.
 # Особенности проекта :
