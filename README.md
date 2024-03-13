@@ -23,4 +23,4 @@
 - [Miro](https://miro.com/app/board/uXjVNix6Kkc=/?share_link_id=409771900834)
 - [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
 # Видео 
-- [Видеопрезентация] (https://drive.google.com/file/d/1MQjKi6VsM67iNQW8Yf4f4-TfXtUT03-k/view?usp=sharing)
+- [Видеопрезентация](https://drive.google.com/file/d/1MQjKi6VsM67iNQW8Yf4f4-TfXtUT03-k/view?usp=sharing)
