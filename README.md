@@ -26,3 +26,4 @@
 - [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
 # Видео 
 - [Видеопрезентация](https://drive.google.com/file/d/1MQjKi6VsM67iNQW8Yf4f4-TfXtUT03-k/)
+- [Видеопрезентация_резервная_ссылка](https://disk.yandex.ru/i/A1664zXzV8Y4gw)
