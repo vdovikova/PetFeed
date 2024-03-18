@@ -26,5 +26,5 @@
 - [YouTrack](https://vdovikova.youtrack.cloud/agiles/159-2/current)
 - [Figma](https://www.figma.com/file/pnKs0OTs2nhnHEqQi8QOj7/Untitled?type=design&node-id=0-1&mode=design&t=dNU7MjWdGTGL3RFm-0)
 # Видео 
-- [Видеопрезентация](https://drive.google.com/file/d/1MQjKi6VsM67iNQW8Yf4f4-TfXtUT03-k/)
-- [Видеопрезентация_резервная_ссылка](https://disk.yandex.ru/i/A1664zXzV8Y4gw)
+- [Видеопрезентация](https://drive.google.com/file/d/1tYGe_ovQ-1WhHn_kj_ZcBGgJ4FQcdD-L)
+- [Видеопрезентация_резервная_ссылка](https://disk.yandex.ru/i/96-0ZtEF3x0Q4w)
