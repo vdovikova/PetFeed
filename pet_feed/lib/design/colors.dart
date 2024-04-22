@@ -7,3 +7,5 @@ const Color mainGreenColor = Color(0xFF8E9326);
 const Color textColor = Color(0xFF4F3129);
 const Color bottomNavBarColor = Color(0xFFEDF0E8);
 const Color dangerColor = Color(0xFFE64646);
+
+final gradientColorList = <Color>[mainYellowColor, mainGreenColor];
