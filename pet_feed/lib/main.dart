@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'PetFeed',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: mainGreenColor),
+          colorScheme: ColorScheme.fromSeed(seedColor: mainWhiteColor),
           useMaterial3: true,
         ),
         home: const HomePage(),

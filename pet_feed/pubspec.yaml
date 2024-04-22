@@ -42,16 +42,22 @@ flutter:
       fonts: 
         - asset: assets/fonts/MontserratBold.ttf
           weight: 700
+          # style: Bold
         - asset: assets/fonts/MontserratRegular.ttf
           weight: 400
+          # style: regular
         - asset: assets/fonts/MontserratRomanSemiBold.ttf
           weight: 600
+          # style: romansemibold
         - asset: assets/fonts/MontserratMedium.ttf
           weight: 500
+          # style: medium
         - asset: assets/fonts/MontserratExtraBold.ttf
           weight: 800
+          # style: extrabold
         - asset: assets/fonts/MontserratSemiBold.ttf
           weight: 600
+          # style: semibold
     - family: Aclonica
       fonts: 
         - asset: assets/fonts/Aclonica-Regular.ttf
