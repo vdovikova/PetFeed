@@ -1,8 +1,5 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:pet_feed/custom_icons.dart';
 import 'package:pet_feed/design/colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,7 +37,8 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Питомцы'),
-          BottomNavigationBarItem(icon: Icon(Icons.egg_alt), label: 'Главное'),
+          BottomNavigationBarItem(
+              icon: Icon(CustomIcons.pawprint), label: 'Главное'),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: 'Настройки'),
         ],

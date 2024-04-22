@@ -15,13 +15,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+#   flutter_launcher_icons: "^0.13.1"
+
+# flutter_launcher_icons:
+#   android: "launcher_icon"
+#   image_path: "assets/img/logo.png"
+#   min_sdk_android: 21 # android min sdk min:16, default 21
 
 
   flutter_lints: ^3.0.0
@@ -51,3 +56,6 @@ flutter:
       fonts: 
         - asset: assets/fonts/Aclonica-Regular.ttf
           weight: 400
+    - family:  CustomIcons
+      fonts:
+        - asset: assets/fonts/CustomIcons.ttf
