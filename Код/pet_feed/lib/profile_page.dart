@@ -249,27 +249,21 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          // onTap: (int newIndex) {
-          //   setState((){
-          //     _currentIndex = newIndex;
-          //   });
-          // }
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Питомцы'),
-            BottomNavigationBarItem(
-                icon: Icon(CustomIcons.pawprint), label: 'Главное'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Настройки'),
-          ],
-          selectedLabelStyle: const TextStyle(
-              fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
-          unselectedLabelStyle: const TextStyle(fontFamily: 'Montserrat'),
-          backgroundColor: bottomNavBarColor,
-          unselectedItemColor: textColor,
-          selectedItemColor: mainGreenColor,
-        ),
+        // bottomNavigationBar: BottomNavigationBar(
+        //   items: const [
+        //     BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Питомцы'),
+        //     BottomNavigationBarItem(
+        //         icon: Icon(CustomIcons.pawprint), label: 'Главное'),
+        //     BottomNavigationBarItem(
+        //         icon: Icon(Icons.settings), label: 'Настройки'),
+        //   ],
+        //   selectedLabelStyle: const TextStyle(
+        //       fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        //   unselectedLabelStyle: const TextStyle(fontFamily: 'Montserrat'),
+        //   backgroundColor: bottomNavBarColor,
+        //   unselectedItemColor: textColor,
+        //   selectedItemColor: mainGreenColor,
+        // ),
       ),
     );
   }

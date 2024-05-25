@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_feed/bottom_nav_bar.dart';
 import 'package:pet_feed/design/colors.dart';
 import 'package:pet_feed/profile_page.dart';
 
