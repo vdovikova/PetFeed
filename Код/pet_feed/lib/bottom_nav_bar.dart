@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_feed/custom_icons.dart';
 import 'package:pet_feed/design/colors.dart';
-import 'package:pet_feed/profile_page.dart';
+import 'package:pet_feed/app_bar_controller.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -34,7 +34,6 @@ class _BottomNavBarState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: _pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
