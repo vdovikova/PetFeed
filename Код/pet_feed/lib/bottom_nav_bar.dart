@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_feed/custom_icons.dart';
 import 'package:pet_feed/design/colors.dart';
 import 'package:pet_feed/app_bar_controller.dart';
+import 'package:pet_feed/settings_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -11,18 +12,16 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State {
-  int _selectedTab = 1;
+  int _selectedTab = 0;
 
-  List _pages = [
-    Center(
+  final List _pages = [
+    const Center(
       child: Text("Pet"),
     ),
-    Center(
+    const Center(
       child: HomePage(),
     ),
-    Center(
-      child: Text("Settings"),
-    ),
+    const Center(child: SettingsPage()),
   ];
 
   _changeTab(int index) {

@@ -120,78 +120,82 @@ class ProfilePage extends StatelessWidget {
           ),
           Container(
               width: 390,
-              height: 210,
+              height: 200,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 5, 5, 20),
                 child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     color: mainWhiteColor,
-                    child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Column(children: [
-                        Padding(
-                          padding: EdgeInsets.all(3),
-                          child: Row(children: [
-                            Text(
-                              "Активность",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                            ),
-                            Text(
-                              "Высокая",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                              textAlign: TextAlign.right,
-                            ),
-                          ]),
-                        ),
-                        Divider(),
-                        Padding(
-                          padding: EdgeInsets.all(3),
-                          child: Row(children: [
-                            Text(
-                              "Вес",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                            ),
-                            Text(
-                              "4.5 кг",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                            ),
-                          ]),
-                        ),
-                        Divider(),
-                        Padding(
-                          padding: EdgeInsets.all(3),
-                          child: Row(children: [
-                            Text(
-                              "Болезни",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                            ),
-                            Text(
-                              "Нет",
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 20,
-                                  color: textColor),
-                            ),
-                          ]),
-                        ),
-                      ]),
-                    )),
+                    child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Center(
+                          child: Table(
+                            columnWidths: const {
+                              0: FlexColumnWidth(3),
+                              1: FlexColumnWidth(2)
+                            },
+                            children: const [
+                              TableRow(
+                                children: [
+                                  Text(
+                                    "Активность",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                  ),
+                                  Text(
+                                    "Высокая",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                    textAlign: TextAlign.right,
+                                  )
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Text(
+                                    "Вес",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                  ),
+                                  Text(
+                                    "4.5 кг",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                    textAlign: TextAlign.right,
+                                  )
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Text(
+                                    "Болезни",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                  ),
+                                  Text(
+                                    "Нет",
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        color: textColor),
+                                    textAlign: TextAlign.right,
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ))),
               )),
         ],
       ),

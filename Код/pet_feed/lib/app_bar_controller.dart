@@ -51,8 +51,8 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [ProfilePage(), FoodPage(), Text("data")],
+        body: TabBarView(
+          children: [ProfilePage(), FoodPage(), AdvicePage()],
         ),
       ),
     );
