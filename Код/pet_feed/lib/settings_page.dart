@@ -1,6 +1,7 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:pet_feed/auth/login_page.dart';
+import 'package:pet_feed/auth/reg_page_1.dart';
 import 'package:pet_feed/design/colors.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -19,6 +20,8 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    const hintTextStyle =
+        TextStyle(color: textColor, fontSize: 15, fontFamily: 'Montserrat');
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -71,12 +74,18 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                 ],
               ),
+              const Text(
+                "Name",
+                style: TextStyle(
+                    fontFamily: 'Montserrat', fontSize: 20, color: textColor),
+              ),
               Column(
                 children: [
                   if (_isNameEditing)
                     const TextField(
                       decoration: InputDecoration(
                           hintText: 'Введите имя',
+                          hintStyle: hintTextStyle,
                           border: OutlineInputBorder()),
                     ),
                 ],
@@ -102,12 +111,18 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                 ],
               ),
+              const Text(
+                "Email",
+                style: TextStyle(
+                    fontFamily: 'Montserrat', fontSize: 20, color: textColor),
+              ),
               Column(
                 children: [
                   if (_isEmailEditing)
                     const TextField(
                       decoration: InputDecoration(
                           hintText: 'Введите почту',
+                          hintStyle: hintTextStyle,
                           border: OutlineInputBorder()),
                     ),
                 ],
@@ -136,15 +151,40 @@ class _SettingsPageState extends State<SettingsPage> {
               Column(
                 children: [
                   if (_isPassEditing)
-                    const TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          hintText: 'Введите пароль',
-                          border: OutlineInputBorder()),
-                    ),
+                    const Column(
+                      children: [
+                        TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: 'Текущий пароль',
+                              hintStyle: hintTextStyle,
+                              border: OutlineInputBorder()),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: 'Новый пароль',
+                              hintStyle: hintTextStyle,
+                              border: OutlineInputBorder()),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: 'Повторите новый пароль',
+                              hintStyle: hintTextStyle,
+                              border: OutlineInputBorder()),
+                        )
+                      ],
+                    )
                 ],
               ),
-              Divider(),
+              const Divider(),
               const Row(
                 children: [
                   Icon(Icons.sunny, color: textColor),
@@ -185,7 +225,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           color: textColor)),
                 ],
               ),
-              Divider(),
+              const Divider(),
               const Row(
                 children: [
                   Icon(Icons.language, color: textColor),
@@ -208,7 +248,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     _selectedLanguage = newValue!;
                   });
                 },
-                items: <String>['Русский', 'English']
+                items: <String>['Русский']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -220,7 +260,14 @@ class _SettingsPageState extends State<SettingsPage> {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {}, icon: Icon(Icons.exit_to_app_outlined)),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
+                        );
+                      },
+                      icon: Icon(Icons.exit_to_app_outlined)),
                   const Text(
                     'Выйти из аккаунта',
                     style: TextStyle(
@@ -233,7 +280,12 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               SizedBox(height: 100),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegistrationPage()),
+                  );
+                },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: mainWhiteColor),
                 child: const Text(
@@ -241,7 +293,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontSize: 15,
-                      color: Colors.red),
+                      color: dangerColor),
                 ),
               ),
             ],

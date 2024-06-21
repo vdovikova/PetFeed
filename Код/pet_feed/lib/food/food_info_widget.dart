@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:pet_feed/custom_icons.dart';
+import 'package:pet_feed/auth/feed_page.dart';
+import 'package:pet_feed/design/custom_icons.dart';
 import 'package:pet_feed/design/colors.dart';
+import 'package:pet_feed/user.dart';
+import 'package:pet_feed/user_provider.dart';
 
 class FoodInfo extends StatelessWidget {
   const FoodInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
+    UserInfo user = UserProvider.of(context);
+    String suitable = "Корм подходит вашему питомцу";
     return Container(
         width: 390,
         height: 210,
@@ -16,7 +21,7 @@ class FoodInfo extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               color: mainYellowColor.withOpacity(0.6),
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
@@ -26,8 +31,8 @@ class FoodInfo extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Probalance Sterilized",
-                            style: TextStyle(
+                            user.findActivePet().feed,
+                            style: const TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontSize: 20,
                                 color: textColor),
@@ -41,8 +46,8 @@ class FoodInfo extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Корм подходит вашему питомцу",
-                            style: TextStyle(
+                            suitable,
+                            style: const TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontSize: 16,
                                 color: textColor),
@@ -55,14 +60,23 @@ class FoodInfo extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            "Сменить корм",
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: textColor),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FeedPage(
+                                        pet_name: user.findActivePet().name)),
+                              );
+                            },
+                            child: const Text(
+                              'Сменить корм',
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: textColor),
+                            ),
                           ),
                         ],
                       ),
