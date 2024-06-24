@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pet_feed/auth/login_page.dart';
 import 'package:pet_feed/auth/reg_page_1.dart';
 import 'package:pet_feed/design/colors.dart';
+import 'package:pet_feed/user.dart';
+import 'package:pet_feed/user_provider.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -17,9 +19,9 @@ class _SettingsPageState extends State<SettingsPage> {
   bool _isNameEditing = false;
   bool _isEmailEditing = false;
   bool _isPassEditing = false;
-
   @override
   Widget build(BuildContext context) {
+    UserInfo user = UserProvider.of(context);
     const hintTextStyle =
         TextStyle(color: textColor, fontSize: 15, fontFamily: 'Montserrat');
     return Scaffold(
@@ -74,8 +76,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                 ],
               ),
-              const Text(
-                "Name",
+              Text(
+                user.name,
                 style: TextStyle(
                     fontFamily: 'Montserrat', fontSize: 20, color: textColor),
               ),
@@ -111,8 +113,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                 ],
               ),
-              const Text(
-                "Email",
+              Text(
+                user.email,
                 style: TextStyle(
                     fontFamily: 'Montserrat', fontSize: 20, color: textColor),
               ),
