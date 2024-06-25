@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pet_feed/auth/auth_app_bar.dart';
 import 'package:pet_feed/auth/reg_page_1.dart';
 import 'package:pet_feed/bottom_nav_bar.dart';
 import 'package:pet_feed/design/colors.dart';
 import 'package:pet_feed/user.dart';
 import 'package:pet_feed/user_provider.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
+}
+List<String> users = [];
+
+Future<List<String>> fetchUsers() async {
+  final response = await http.get(Uri.parse('http://10.0.2.2:8000/api/users'));
+
+  if (response.statusCode == 200) {
+    var jsonMap = json.decode(response.body) as Map<String, dynamic>;
+    var jsonList = jsonMap['results'] as List<dynamic>;
+  return users;
+  } else {
+    throw Exception('Failed to load data');
+  }
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -27,6 +43,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    users = fetchUsers() as List<String>;
     UserInfo user = UserProvider.of(context);
     return Scaffold(
       body: Stack(
@@ -46,21 +63,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // логотип
-                SvgPicture.asset(
-                  'assets/img/logo_Icon.svg',
-                  color: mainWhiteColor, // укажите правильный путь к файлу
-                  width: 50,
-                  height: 50,
-                ),
-
-                const Text(
-                  'PetFeed',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: mainWhiteColor,
-                      fontSize: 40,
-                      fontFamily: 'Aclonica'),
-                ),
+                const AuthAppBar(),
 
                 const SizedBox(height: 50),
                 const Text(
@@ -151,16 +154,36 @@ class _LoginPageState extends State<LoginPage> {
 
 // кнопка ВОЙТИ
                 ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
                     setState(() {
                       email = emailController.text;
                       password = passwordController.text;
                     });
                     if (email != '' && password != '') {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const BottomNavBar()),
-                      );
+                      // try {
+                      //   final users = await fetchUsers();
+                      //   final user = users.firstWhere(
+                      //         (user) => user['email'] == email && user['password'] == password,
+                      //     orElse: () => null,
+                      //   );
+                      //   if (user != null) {
+                      //     // Пользователь найден
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) => const BottomNavBar()),
+                      //     );
+                      //   } else {
+                      //     // Пользователь не найден
+                      //     ScaffoldMessenger.of(context).showSnackBar(
+                      //       const SnackBar(content: Text('Неверный email или пароль')),
+                      //     );
+                      //   }
+                      // } catch (e) {
+                      //   // Обработайте ошибку получения пользователей
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     const SnackBar(content: Text('Ошибка при получении пользователей')),
+                      //   );
+                      // }
                     }
                   },
                   style: ElevatedButton.styleFrom(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:pet_feed/auth/auth_app_bar.dart';
 import 'package:pet_feed/auth/health_page.dart';
@@ -6,7 +5,6 @@ import 'package:pet_feed/bottom_nav_bar.dart';
 import 'package:pet_feed/design/colors.dart';
 import 'package:pet_feed/user.dart';
 import 'package:pet_feed/user_provider.dart';
-import 'package:postgres/postgres.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -42,19 +40,14 @@ class _FeedPageState extends State<FeedPage> {
 
     if (response.statusCode == 200) {
       var jsonMap = json.decode(response.body) as Map<String, dynamic>;
-
       var jsonList = jsonMap['results'] as List<dynamic>;
-
-
-      var feedNames = <String>[];
-      for (var jsonMap in jsonList.cast<Map<String, dynamic>>()) {
-  var feedName = jsonMap['feed_name'] as String;
-  feedNames.add(feedName);
-}
+      _items = jsonList.cast<Map<String, dynamic>>().map<String>((jsonMap) => jsonMap['feed_name'] as String).toList();
+      _filteredItems = _items;
     } else {
       throw Exception('Failed to load data');
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +56,12 @@ class _FeedPageState extends State<FeedPage> {
     return Scaffold(
         body: Stack(children: [
       // изображение на фоне
-      const AuthAppBar(),
+          Positioned.fill(
+            child: Image.asset(
+              'assets/img/background.png',
+              fit: BoxFit.cover,
+            ),
+          ),
 
       ListView(children: [
         Padding(

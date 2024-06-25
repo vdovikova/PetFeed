@@ -7,6 +7,8 @@ import 'package:talker/talker.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'auth/login_page.dart';
+
 
 Talker talker = Talker();
 void main() {
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: mainWhiteColor),
         useMaterial3: true,
       ),
-      home: const RegistrationPage(),
+      home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
